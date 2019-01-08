@@ -1,0 +1,14 @@
+1.
+select
+trips.duration,
+trips.trip_id,
+trips.start_station,
+trips.end_station,
+weather.events
+from 
+trips
+join
+weather
+on trips.zip_code = weather.zip
+where events = 'Rain'
+order by duration desc;
